@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 23-Maio-2018 às 10:32
+-- Generation Time: 23-Maio-2018 às 10:42
 -- Versão do servidor: 5.6.37
 -- PHP Version: 7.1.8
 
@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `Users` (
   `ID` int(11) NOT NULL,
   `Nome` varchar(255) NOT NULL,
   `Email` varchar(255) NOT NULL,
-  `Password` binary(32) NOT NULL,
+  `Password` varchar(30) NOT NULL,
   `Contacto` int(9) NOT NULL,
   `Peso` float(3,2) NOT NULL,
   `Altura` float(2,2) NOT NULL,
@@ -200,7 +200,7 @@ ALTER TABLE `Plano_Treino`
 -- Limitadores para a tabela `Users`
 --
 ALTER TABLE `Users`
-  ADD CONSTRAINT `mensalidade_idfk_1` FOREIGN KEY (`Mensalidade_ID`) REFERENCES `mensalidades` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `mensalidade_idfk_1` FOREIGN KEY (`Mensalidade_ID`) REFERENCES `Mensalidade` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`Pacote_ID`) REFERENCES `Pacotes` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
