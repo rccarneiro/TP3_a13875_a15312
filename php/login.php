@@ -4,26 +4,26 @@ require_once 'db.php';
 if($_POST){
 
     session_start();
-    $email = $_POST['Email'];
-    $password = $_POST['Password'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-    $sql = 'SELECT * FROM Users WHERE Email = "'.$email.'" AND Password = "'.$password.'"';
+    $sql = 'SELECT * FROM Users WHERE email = "'.$email.'" AND password = "'.$password.'"';
     $result = $PDO->query($sql);
     $row = $result->fetch();
 
     if($row){
-        $_SESSION['Email'] = $email;
-        $_SESSION['Password'] = $password;
-        $_SESSION['Nome'] = $row['Nome'];
-        header('location:./php/web.php');
+        $_SESSION['email'] = $email;
+        $_SESSION['password'] = $password;
+        $_SESSION['nome'] = $row['nome'];
+        header('location:../user_profile.html');
     }else{
-        unset ($_SESSION['Email']);
-        unset ($_SESSION['Password']);
-        header('location:./php/members.php');
+        unset ($_SESSION['email']);
+        unset ($_SESSION['password']);
+        header('location:../members.html');
     }
 }else{
-    unset ($_SESSION['Email']);
-    unset ($_SESSION['Password']);
+    unset ($_SESSION['email']);
+    unset ($_SESSION['password']);
 }
 
 
