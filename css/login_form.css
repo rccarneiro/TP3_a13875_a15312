@@ -14,7 +14,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #fedc0a;
+  color: #1ab188;
   -webkit-transition: .5s ease;
   transition: .5s ease;
 }
@@ -23,7 +23,7 @@ a:hover {
 }
 
 .form {
-  background: rgba(0, 0, 0, 0.7);
+  background: #100e0e80;
   padding: 40px;
   width: 600px;
   margin: 40px auto;
@@ -90,7 +90,7 @@ label {
 }
 label .req {
   margin: 2px;
-  color: #fedc0a;
+  color: #1ab188;
 }
 
 label.active {

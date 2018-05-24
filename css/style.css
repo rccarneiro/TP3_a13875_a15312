@@ -88,7 +88,6 @@ header{
   background-color: #fedc0a;
   padding-top: 20px;
   padding-bottom: 30px;
-  height: 500px;
 }
 .sect1 h2{
   color: #000;
@@ -113,7 +112,6 @@ header{
   background-color: #000;
   padding-top: 20px;
   padding-bottom: 30px;
-  height: 500px;
 }
 .sect2 h2{
   color: #fff;
@@ -137,7 +135,6 @@ header{
   background-color: #100e0e80;
   padding-top: 20px;
   padding-bottom: 30px;
-  height: 500px;
 }
 .sect3 h2{
   color: #fff;
@@ -164,7 +161,7 @@ header{
 .sect4{
   background-color: #100e0e80;
   padding-top: 20px;
-  height: 500px;
+  padding-bottom: 30px;
 }
 .sect4 h2{
   color: #fff;

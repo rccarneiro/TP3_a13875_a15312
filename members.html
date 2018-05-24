@@ -80,48 +80,48 @@
           <div id="signup">
             <h1>Regista-te aqui.</h1>
 
-            <form action="register.php" method="post">
+            <form action="./php/InsertRegisto.php" method="post">
 
               <div class="field-wrap">
                 <label>
-                  Nome<span class="req"> *</span>
+                  Nome<span class="req">*</span>
                 </label>
                 <input type="text" name="nome" required autocomplete="off" />
               </div>
 
             <div class="field-wrap">
               <label>
-                Email<span class="req"> *</span>
+                Email<span class="req">*</span>
               </label>
               <input type="email" name="email" required autocomplete="off"/>
             </div>
 
             <div class="field-wrap">
               <label>
-                Password<span class="req"> *Mínimo 8 carateres.</span>
+                Password<span class="req">*Mínimo 8 carateres.</span>
               </label>
               <input type="password" name="password" required autocomplete="off"/>
             </div>
 
             <div class="field-wrap">
               <label>
-                Contacto<span class="req"> *</span>
+                Contacto<span class="req">* 945343234</span>
               </label>
-              <input type="text" name="contacto" required autocomplete="off"/>
+              <input type="text" name="contacto" pattern="^\d{9}$" type="tel" max="999999999"onkeyup="validar(this,'num');" required autocomplete="off"/>
             </div>
 
             <div class="field-wrap">
               <label>
-                Altura<span class="req"> *m</span>
+                Altura<span class="req">* 1.75m</span>
               </label>
-              <input type="text" name="altura" required autocomplete="off"/>
+              <input type="text" name="altura" step="0.01" min="0" max="3.0" onkeyup="validar(this,'num');" required autocomplete="off"/>
             </div>
 
             <div class="field-wrap">
               <label>
-                Peso<span class="req"> *kg</span>
+                Peso<span class="req">* 80.50kg</span>
               </label>
-              <input type="text" name="peso" required autocomplete="off"/>
+              <input type="text" name="peso" step="0.01" min="0" max="500" onkeyup="validar(this,'num');" required autocomplete="off"/>
             </div>
             <button type="submit" class="button button-block"/>Registar</button>
 
@@ -207,6 +207,7 @@
     <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
     <script src="js/scrolltop.js"></script>
+    <script type="text/javascript" src="./js/Form.js"></script>
     <script type="text/javascript" src="./js/login_form.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
   </body>
