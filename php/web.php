@@ -1,12 +1,11 @@
 <?
 session_start();
 
-if((!isset ($_SESSION['login'])) ){
-    header('location:index.php');
+if((!isset ($_SESSION['Email'])) ){
+    header('location:./php/members.php');
 }else{
-    echo 'Olá '.$_SESSION['nome'].'!';
+    echo 'Olá '.$_SESSION['Nome'].'!';
 }
 ?>
 <br><br>
-<a href="logout.php">LOGOUT</a>
-
+<a href="./php/logout.php">LOGOUT</a>

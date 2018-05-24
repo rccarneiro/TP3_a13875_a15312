@@ -1,8 +1,8 @@
 <?
 session_start();
-unset ($_SESSION['login']);
-unset ($_SESSION['password']);
-unset ($_SESSION['nome']);
+unset ($_SESSION['Email']);
+unset ($_SESSION['Password']);
+unset ($_SESSION['Nome']);
 
-header('location:index.php');
+header('location:./php/members.php');
 ?>
