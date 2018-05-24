@@ -14,7 +14,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #1ab188;
+  color: #fedc0a;
   -webkit-transition: .5s ease;
   transition: .5s ease;
 }
@@ -23,7 +23,7 @@ a:hover {
 }
 
 .form {
-  background: #100e0e80;
+  background: rgba(0, 0, 0, 0.7);
   padding: 40px;
   width: 600px;
   margin: 40px auto;
@@ -81,7 +81,7 @@ label {
   -webkit-transform: translateY(6px);
           transform: translateY(6px);
   left: 13px;
-  color: rgba(255, 255, 255, 0.5);
+  color: #fff;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   -webkit-backface-visibility: hidden;
@@ -90,7 +90,7 @@ label {
 }
 label .req {
   margin: 2px;
-  color: #1ab188;
+  color: #fedc0a;
 }
 
 label.active {
@@ -123,7 +123,7 @@ input, textarea {
 }
 input:focus, textarea:focus {
   outline: 0;
-  border-color: #1ab188;
+  border-color: #fedc0a;
 }
 
 textarea {
