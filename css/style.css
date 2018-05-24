@@ -51,7 +51,7 @@ body{
     margin-top: -15px;
 }
 .navbar-inverse .navbar-nav>li>a{
-  padding: 50px 40px 15px 40px;
+  padding: 50px 40px 10px 40px;
   color: #fff;
   font-size: 20px;
   font-family: 'Oswald', sans-serif;
@@ -60,7 +60,7 @@ body{
   background-color: #fedc0a80;
 }
 .navbar-nav>li>.dropdown-menu{
-  background-color: rgba(0, 0, 0, 0.67);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .dropdown-menu {
 min-width: 125.28px;
@@ -88,6 +88,7 @@ header{
   background-color: #fedc0a;
   padding-top: 20px;
   padding-bottom: 30px;
+  height: 500px;
 }
 .sect1 h2{
   color: #000;
@@ -112,6 +113,7 @@ header{
   background-color: #000;
   padding-top: 20px;
   padding-bottom: 30px;
+  height: 500px;
 }
 .sect2 h2{
   color: #fff;
@@ -135,6 +137,7 @@ header{
   background-color: #100e0e80;
   padding-top: 20px;
   padding-bottom: 30px;
+  height: 500px;
 }
 .sect3 h2{
   color: #fff;
@@ -161,7 +164,7 @@ header{
 .sect4{
   background-color: #100e0e80;
   padding-top: 20px;
-  padding-bottom: 30px;
+  height: 500px;
 }
 .sect4 h2{
   color: #fff;

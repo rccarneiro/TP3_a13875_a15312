@@ -23,7 +23,7 @@ a:hover {
 }
 
 .form {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   padding: 40px;
   width: 600px;
   margin: 40px auto;
@@ -68,14 +68,12 @@ a:hover {
 .tab-content > div:last-child {
   display: none;
 }
-
 h1 {
   text-align: center;
   color: #ffffff;
   font-weight: 300;
   margin: 0 0 40px;
 }
-
 label {
   position: absolute;
   -webkit-transform: translateY(6px);
@@ -92,7 +90,6 @@ label .req {
   margin: 2px;
   color: #fedc0a;
 }
-
 label.active {
   -webkit-transform: translateY(50px);
           transform: translateY(50px);
@@ -102,11 +99,9 @@ label.active {
 label.active .req {
   opacity: 0;
 }
-
 label.highlight {
   color: #ffffff;
 }
-
 input, textarea {
   font-size: 22px;
   display: block;
@@ -125,17 +120,14 @@ input:focus, textarea:focus {
   outline: 0;
   border-color: #fedc0a;
 }
-
 textarea {
   border: 2px solid #a0b3b0;
   resize: vertical;
 }
-
 .field-wrap {
   position: relative;
   margin-bottom: 40px;
 }
-
 .top-row:after {
   content: "";
   display: table;
@@ -149,7 +141,6 @@ textarea {
 .top-row > div:last-child {
   margin: 0;
 }
-
 .button {
   border: 0;
   outline: none;
@@ -168,12 +159,10 @@ textarea {
 .button:hover, .button:focus {
   background: #ddbf07;
 }
-
 .button-block {
   display: block;
   width: 100%;
 }
-
 .forgot {
   margin-top: -20px;
   text-align: right;
