@@ -1,22 +1,13 @@
 <?php
 require_once './php/db.php';
 
-<<<<<<< HEAD
 session_start();
-=======
-$id = $_REQUEST['ID'];
-$nome = $_REQUEST['Nome'];
->>>>>>> cd70f514a52c88695ad287a5279753a8cbab4300
 
 $sql = "SELECT * FROM Users";
 $result = $PDO->query($sql);
 $rows = $result->fetchAll();
 ?>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cd70f514a52c88695ad287a5279753a8cbab4300
 <link rel="icon" href="./img/gymLogo.jpg">
 <title>Gym Star</title>
 <link href="https://fonts.googleapis.com/css?family=Oswald|Ubuntu" rel="stylesheet">
@@ -28,16 +19,6 @@ $rows = $result->fetchAll();
 <link rel="stylesheet" href="./css/Footer-with-map.css">
 
 <!--begin: navbar-->
-<<<<<<< HEAD
-=======
-<?
-foreach ($rows as $row) {
-  $subquery = "SELECT * FROM Users WHERE ID=".$row['ID'];
-  $subresult = $PDO->query($subquery);
-  $query = $subresult->fetch();
-
-?>
->>>>>>> cd70f514a52c88695ad287a5279753a8cbab4300
 <nav class="navbar navbar-inverse navbar-fixed-top nav1">
   <div class="row navrow">
     <div class="col-md-4">
@@ -83,11 +64,7 @@ foreach ($rows as $row) {
           </ul>
         </li>
         <li class="dropdown">
-<<<<<<< HEAD
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?echo $_SESSION['nome'];?></a>
-=======
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?echo $row['Nome'];?></a>
->>>>>>> cd70f514a52c88695ad287a5279753a8cbab4300
           <ul class="dropdown-menu">
             <li><a href="#">Perfil</a></li>
             <li><a href="./php/logout.php">Logout</a></li>
@@ -97,12 +74,6 @@ foreach ($rows as $row) {
     </div>
   </div>
 </nav>
-<<<<<<< HEAD
-=======
-<?
-}
-?>
->>>>>>> cd70f514a52c88695ad287a5279753a8cbab4300
 <!--end: navbar-->
 <!--scroll up button-->
 <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
