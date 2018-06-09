@@ -80,6 +80,8 @@ if(isset($_POST['action']) or isset($_GET['view']))
             z-index: 1;
             top: 240px;
         }
+        .espaço{
+          margin-bottom:50px; }
     </style>
 
 <hr />
@@ -99,7 +101,8 @@ if(isset($_POST['action']) or isset($_GET['view']))
 <!-- add calander in this div -->
 <div class="container">
   <div class="row">
-<div id="calendar"></div>
+<div class="espaço" id="calendar"></div>
+
 
 </div>
 </div>
@@ -119,7 +122,9 @@ if(isset($_POST['action']) or isset($_GET['view']))
             <div class="control-group">
                 <label class="control-label" for="inputPatient">Event:</label>
                 <div class="field desc">
-                    <input class="form-control" id="title" name="title" placeholder="Event" type="text" value="">
+                    <!---<input class="form-control" id="title" name="title" placeholder="Event" type="text" value="">
+                    -->
+                    <h1><?echo $_SESSION['nome'];?></h1>
                 </div>
             </div>
 

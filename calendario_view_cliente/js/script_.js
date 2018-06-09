@@ -7,7 +7,7 @@ $(document).ready(function(){
             },
             defaultView: 'agendaMonth',
             editable: false,
-            selectable: true,
+            selectable: false,
             allDaySlot: false,
 
             events: "index.php?view=1",

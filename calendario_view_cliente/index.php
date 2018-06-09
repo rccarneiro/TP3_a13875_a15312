@@ -1,0 +1,105 @@
+<?php
+session_start();
+include("database.php");
+if(!isset($_SESSION['user']))
+{
+    $_SESSION['user'] = session_id();
+}
+$uid = $_SESSION['user'];  // set your user id settings
+$datetime_string = date('c',time());
+
+if(isset($_POST['action']) or isset($_GET['view']))
+{
+    if(isset($_GET['view']))
+    {
+        header('Content-Type: application/json');
+        $start = mysqli_real_escape_string($connection,$_GET["start"]);
+        $end = mysqli_real_escape_string($connection,$_GET["end"]);
+
+        $result = mysqli_query($connection,"SELECT `id`, `start` ,`end` ,`title` FROM  `events` where (date(start) >= '$start' AND date(start) <= '$end') and uid='".$uid."'");
+        while($row = mysqli_fetch_assoc($result))
+        {
+            $events[] = $row;
+        }
+        echo json_encode($events);
+        exit;
+    }
+}
+
+?>
+
+<!doctype html>
+  <body  >
+
+
+    <style type="text/css">
+        .block a:hover{
+            color: silver;
+        }
+        .block a{
+            color: #fff;
+        }
+        .block {
+            position: fixed;
+            background: #2184cd;
+            padding: 20px;
+            z-index: 1;
+            top: 240px;
+        }
+        .espaço{
+          margin-bottom:50px; }
+    </style>
+
+<hr />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<link  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" >
+
+<link href="css/fullcalendar.css" rel="stylesheet" />
+<link href="css/fullcalendar.print.css" rel="stylesheet" media="print" />
+<script src="js/moment.min.js"></script>
+<script src="js/fullcalendar.js"></script>
+
+
+<!-- add calander in this div -->
+<div class="container">
+  <div class="row">
+<div class="espaço" id="calendar"></div>
+
+
+</div>
+</div>
+
+
+<!-- Modal -->
+<div id="calendarModal" class="modal fade">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Event Details</h4>
+        </div>
+        <div id="modalBody" class="modal-body">
+        <h4 id="modalTitle" class="modal-title"></h4>
+        <div id="modalWhen" style="margin-top:5px;"></div>
+        </div>
+        <input type="hidden" id="eventID"/>
+        <div class="modal-footer">
+            <button class="btn" aria-hidden="true">Inscriver</button>
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+            <button type="submit" class="btn btn-danger" id="deleteButton">Delete</button>
+        </div>
+    </div>
+</div>
+</div>
+<!--Modal-->
+
+
+<div style='margin-left: auto;margin-right: auto;text-align: center;'>
+</div>
+
+  </body>
+</html>
