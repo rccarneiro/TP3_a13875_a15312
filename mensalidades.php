@@ -7,6 +7,7 @@ $sql = "SELECT * FROM Mensalidades";
 $result = $PDO->query($sql);
 $rows = $result->fetchAll();
 
+$id = $_REQUEST['ID'];
 ?>
 
 
@@ -114,11 +115,11 @@ $rows = $result->fetchAll();
          <?
 
          foreach ($rows as $row) {
-           $subquery = "SELECT * FROM Mensalidades WHERE User_ID=".$_SESSION['ID']; //tirar duvidas
+           $subquery = "SELECT * FROM Mensalidades WHERE User_ID=".$id; //tirar duvidas
            $subresult = $PDO->query($subquery);
            $query = $subresult->fetch();
-
          ?>
+
          <tbody>
             <tr>
                <td>
