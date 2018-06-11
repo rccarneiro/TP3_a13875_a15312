@@ -91,8 +91,8 @@ label .req {
   color: #fedc0a;
 }
 label.active {
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
   left: 2px;
   font-size: 14px;
 }

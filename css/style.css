@@ -238,6 +238,20 @@ legend{
   background-color: #fedc0a;
   border-color: #fedc0a;
 }
+.users{
+  margin-top: 150px;
+}
+.trainers{
+  margin-top: 150px;
+}
+.calendario{
+  margin-top: 60px;
+  margin-bottom: 0px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
 #success_message{ display: none;}
 @media(max-width: 767px){
   .navrow{

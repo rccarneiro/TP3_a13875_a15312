@@ -54,8 +54,6 @@ function test_input($data){
 
 require_once "db.php";
 
-
-
 $sql = "INSERT INTO Users (Nome, Email, Password, Contacto, Peso, Altura) VALUES(:nome, :email, :password, :contacto, :peso, :altura)";
 $stmt = $PDO->prepare( $sql );
 
@@ -65,7 +63,6 @@ $stmt->bindParam(':password', md5($password));
 $stmt->bindParam(':contacto', $contacto);
 $stmt->bindParam(':peso', $peso);
 $stmt->bindParam(':altura', $altura);
-
 $result = $stmt->execute();
 
 if (!$result){
