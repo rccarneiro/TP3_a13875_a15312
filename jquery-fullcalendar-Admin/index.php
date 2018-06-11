@@ -98,7 +98,7 @@ if(isset($_POST['action']) or isset($_GET['view']))
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="/index.html">
-        <img class="logo" src="./img/gymLogo.jpg" alt="Brand Logo">
+        <img class="logo" src="../img/gymLogo.jpg" alt="Brand Logo">
       </a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
