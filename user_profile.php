@@ -65,11 +65,11 @@ $rows = $result->fetchAll();
         </li>
         <li class="dropdown">
 
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?echo $_SESSION['nome'];?></a>
           <ul class="dropdown-menu">
             <li><a href="#">Perfil</a></li>
             <li><a href="mensalidades.php">Mensalidades</a></li>
-            <li><a href="./jquery_calendar/index.php">Inscrição Aulas</a></li>
+            <li><a href="./jquery_calendar_events/index.php">Inscrição Aulas</a></li>
             <li><a href="./php/logout.php">Logout</a></li>
           </ul>
         </li>

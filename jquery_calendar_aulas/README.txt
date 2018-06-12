@@ -1,0 +1,1 @@
+Este calendário aparece no backoffice e permite que o admin adicione aulas no calendário.

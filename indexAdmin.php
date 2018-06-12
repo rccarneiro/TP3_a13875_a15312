@@ -42,7 +42,7 @@
          <ul class="nav navbar-nav">
            <li><a href="users_backoffice.php">Informação de Utilizadores</a></li>
            <li><a href="trainers_backoffice.php">Informação de Treinadores</a></li>
-           <li><a href="calendar.php">Calendário de Aulas</a></li>
+           <li><a href="./jquery_calendar_events/index.php">Calendário de Aulas</a></li>
            <li class="dropdown">
              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bem vindo, Admin!</a>
              <ul class="dropdown-menu">
