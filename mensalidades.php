@@ -115,7 +115,7 @@ $id = $_REQUEST['ID'];
          <?
 
          foreach ($rows as $row) {
-           $subquery = "SELECT * FROM Mensalidades WHERE User_ID=".$id; //tirar duvidas
+           $subquery = 'SELECT * FROM Mensalidades WHERE User_ID="'.$id.'"'; //tirar duvidas
            $subresult = $PDO->query($subquery);
            $query = $subresult->fetch();
          ?>

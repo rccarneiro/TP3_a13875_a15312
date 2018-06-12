@@ -252,6 +252,22 @@ legend{
   background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
 }
+.user_profile{
+  margin-top: 300px;
+  margin-bottom: 300px;
+}
+.user_profile h1{
+  font-size: 50px;
+  color: #fedc0a;
+}
+.admin{
+  margin-top: 300px;
+  margin-bottom: 300px;
+}
+.admin h1{
+  font-size: 50px;
+  color: #fedc0a;
+}
 #success_message{ display: none;}
 @media(max-width: 767px){
   .navrow{

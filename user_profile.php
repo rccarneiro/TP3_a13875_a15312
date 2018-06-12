@@ -65,7 +65,7 @@ $rows = $result->fetchAll();
         </li>
         <li class="dropdown">
 
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bem vindo, <?echo $_SESSION['nome'];?>!</a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
           <ul class="dropdown-menu">
             <li><a href="#">Perfil</a></li>
             <li><a href="mensalidades.php">Mensalidades</a></li>
@@ -82,7 +82,11 @@ $rows = $result->fetchAll();
 <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
 
 <!--begin: page-content-->
-
+<div class="container user_profile">
+  <div class="row">
+    <h1>Bem vindo, <?echo $_SESSION['nome'];?>!</h1>
+  </div>
+</div>
 <!--end: page-content-->
 <section>
   <footer id="myFooter">

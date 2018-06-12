@@ -14,7 +14,7 @@ if($_POST){
     if($row){
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $password;
-        header('location:../users_backoffice.php');
+        header('location:../indexAdmin.php');
     }else{
         unset ($_SESSION['email']);
         unset ($_SESSION['password']);
@@ -24,11 +24,4 @@ if($_POST){
     unset ($_SESSION['email']);
     unset ($_SESSION['password']);
 }
-
-
-
-
-
-
-
 ?>
