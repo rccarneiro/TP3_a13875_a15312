@@ -62,22 +62,16 @@ if(isset($_POST['action']) or isset($_GET['view']))
 
 ?>
 
-
-<body>
 <meta charset="utf-8">
 <link rel="icon" href="../img/gymLogo.jpg">
 <title>Gym Star</title>
 <link href="https://fonts.googleapis.com/css?family=Oswald|Ubuntu" rel="stylesheet">
 <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="../bootstrap/fonts/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/scrolltop.css">
 <link rel="stylesheet" href="../css/Footer-with-map.css">
-
-
-
 <link  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" >
-
+<link rel="stylesheet" href="../css/style.css">
 <link href="css/fullcalendar.css" rel="stylesheet" />
 <link href="css/fullcalendar.print.css" rel="stylesheet" media="print" />
 
@@ -108,32 +102,24 @@ if(isset($_POST['action']) or isset($_GET['view']))
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../about.html">Sobre</a></li>
+        <li><a href="../users_backoffice.php">Informação de Utilizadores</a></li>
+        <li><a href="../trainers_backoffice.php">Informação de Treinadores</a></li>
+        <li><a href="index.php">Calendário de Aulas</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Atividades<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin</a>
           <ul class="dropdown-menu">
-            <li><a href="../calendario_view_cliente/index.php">Calendário de atividades</a></li>
-            <li><a href="../gallery.html">Galeria</a></li>
+            <li><a href="indexAdmin.php">Perfil</a></li>
+            <li><a href="../php/logout_backoffice.php">Logout</a></li>
           </ul>
         </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Serviços<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Personal Training</a></li>
-            <li><a href="#">Máquinas</a></li>
-            <li><a onclick="window.open('https://www.enetural.com/pt/artigos/planos-alimentares_102/')">Planos Alimentares</a></li>
-            <li><a href="../trainPlan.html">Planos de treino</a></li>
-          </ul>
-        </li>
-        <li><a href="../members.html">Membros</a></li>
+
       </ul>
     </div>
   </div>
 </nav>
 
 <!-- add calander in this div -->
-<div class="container">
+<div class="container calendar">
   <div class="row">
 <div class="espaço" id="calendar"></div>
 
@@ -213,5 +199,3 @@ if(isset($_POST['action']) or isset($_GET['view']))
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
 <script src="js/moment.min.js"></script>
 <script src="js/fullcalendar.js"></script>
-  </body>
-</html>

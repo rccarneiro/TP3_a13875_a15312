@@ -13,7 +13,9 @@
 .fc-rtl {
 	text-align: right;
 }
-
+body{
+		background-color: #fff;
+}
 body .fc { /* extra precedence to overcome jqui */
 	font-size: 1em;
 }
@@ -33,6 +35,7 @@ body .fc { /* extra precedence to overcome jqui */
 .fc-unthemed .fc-list-view,
 .fc-unthemed .fc-list-heading td {
 	border-color: #ddd;
+
 }
 
 .fc-unthemed .fc-popover {

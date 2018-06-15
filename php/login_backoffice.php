@@ -13,15 +13,12 @@ if($_POST){
 
     if($row){
         $_SESSION['email'] = $email;
-        $_SESSION['password'] = $password;
         header('location:../indexAdmin.php');
     }else{
         unset ($_SESSION['email']);
-        unset ($_SESSION['password']);
         header('location:../login_backoffice.html');
     }
 }else{
     unset ($_SESSION['email']);
-    unset ($_SESSION['password']);
 }
 ?>

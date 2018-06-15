@@ -5,7 +5,7 @@ $(document).ready(function(){
                 center: 'title',
                 right: 'agendaMonth,agendaWeek,agendaDay'
             },
-            defaultView: 'agendaMonth',
+            defaultView: 'agendaWeek',
             editable: false,
             selectable: true,
             allDaySlot: false,
@@ -14,8 +14,8 @@ $(document).ready(function(){
 
 
             eventClick:  function(event, jsEvent, view) {
-                endtime = $.fullCalendar.moment(event.end).format('h:mm');
-                starttime = $.fullCalendar.moment(event.start).format('dddd, MMMM Do YYYY, h:mm');
+                endtime = $.fullCalendar.moment(event.end).format('H:mm');
+                starttime = $.fullCalendar.moment(event.start).format('dddd, MMMM Do YYYY, H:mm');
                 var mywhen = starttime + ' - ' + endtime;
                 $('#modalTitle').html(event.title);
                 $('#modalWhen').text(mywhen);
@@ -25,8 +25,8 @@ $(document).ready(function(){
 
             //header and other values
             select: function(start, end, jsEvent) {
-                endtime = $.fullCalendar.moment(end).format('h:mm');
-                starttime = $.fullCalendar.moment(start).format('dddd, MMMM Do YYYY, h:mm');
+                endtime = $.fullCalendar.moment(end).format('H:mm');
+                starttime = $.fullCalendar.moment(start).format('dddd, MMMM Do YYYY, H:mm');
                 var mywhen = starttime + ' - ' + endtime;
                 start = moment(start).format();
                 end = moment(end).format();

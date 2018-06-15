@@ -50,7 +50,7 @@ $rows = $result->fetchAll();
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Atividades<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="activities.html">Calendário de atividades</a></li>
+            <li><a href="./calendario_view_cliente/index.php">Calendário de atividades</a></li>
             <li><a href="gallery.html">Galeria</a></li>
           </ul>
         </li>
@@ -64,12 +64,11 @@ $rows = $result->fetchAll();
           </ul>
         </li>
         <li class="dropdown">
-
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?echo $_SESSION['nome'];?></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Perfil</a></li>
+            <li><a href="user_profile.php">Perfil</a></li>
             <li><a href="mensalidades.php">Mensalidades</a></li>
-            <li><a href="./jquery_calendar_events/index.php">Inscrição Aulas</a></li>
+            <li><a href="./calendario_view_user">Inscrição Aulas</a></li>
             <li><a href="./php/logout.php">Logout</a></li>
           </ul>
         </li>
@@ -82,11 +81,38 @@ $rows = $result->fetchAll();
 <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
 
 <!--begin: page-content-->
-<div class="container user_profile">
-  <div class="row">
-    <h1>Bem vindo, <?echo $_SESSION['nome'];?>!</h1>
+
+<section class="user_profile">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="section-heading">Bem vindo, <?echo $_SESSION['nome'];?>!</h1>
+      </div>
+    </div>
   </div>
-</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <div class="service-box mt-5 mx-auto">
+          <a href="#"><img src="./img/user.png" alt=""></img></a>
+          <a href="#"><h3 class="mb-3">Meu Perfil</h3></a>
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="service-box mt-5 mx-auto">
+          <a href="mensalidades.php"><img src="./img/payment.png" alt=""></img></a>
+          <a href="mensalidades.php"><h3 class="mb-3">Mensalidades</h3></a>
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="service-box mt-5 mx-auto">
+          <a href="./calendario_view_user/index.php"><img src="./img/calendar.png" alt=""></img></a>
+          <a href="./calendario_view_user/index.php"><h3 class="mb-3">Inscrição de Aulas</h3></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <!--end: page-content-->
 <section>
   <footer id="myFooter">

@@ -2,12 +2,11 @@
 require_once './php/db.php';
 
 session_start();
+$id = $_REQUEST['ID'];
 
-$sql = "SELECT * FROM Mensalidades";
+$sql = "SELECT * FROM Mensalidades WHERE User_ID=".$id;
 $result = $PDO->query($sql);
 $rows = $result->fetchAll();
-
-$id = $_REQUEST['ID'];
 ?>
 
 
@@ -54,7 +53,7 @@ $id = $_REQUEST['ID'];
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Atividades<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="activities.html">Calendário de atividades</a></li>
+            <li><a href="./calendario_view_cliente/index.php">Calendário de atividades</a></li>
             <li><a href="gallery.html">Galeria</a></li>
           </ul>
         </li>
@@ -68,12 +67,11 @@ $id = $_REQUEST['ID'];
           </ul>
         </li>
         <li class="dropdown">
-
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bem vindo, <?echo $_SESSION['nome'];?>!</a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?echo $_SESSION['nome'];?></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Perfil</a></li>
+            <li><a href="user_profile.php">Perfil</a></li>
             <li><a href="mensalidades.php">Mensalidades</a></li>
-            <li><a href="./calendario/agenda-views.html">Inscrição Aulas</a></li>
+            <li><a href="./calendario_view_user">Inscrição Aulas</a></li>
             <li><a href="./php/logout.php">Logout</a></li>
           </ul>
         </li>
@@ -134,19 +132,12 @@ $id = $_REQUEST['ID'];
                <td><?echo $row['Valor'];?> €</td>
                <td><?echo $row['Status'];?></td>
                <td><?echo $row['User_ID'];?></td>
-               <td>
-                  <a href="#editUserModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i></a>
-                  <a href="./php/delete.php?id=<?=$row['ID'];?>" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Eliminar">&#xE872;</i></a>
-               </td>
             </tr>
          </tbody>
          <?
          }
          ?>
       </table>
-
-      <caption>Legenda: <span><i class="fa fa-user-circle fa-active"></i></span><label class="label-caption">Ativo</label><span><i class="fa fa-user-circle fa-inactive"></i></span><label class="label-caption">Inativo</label><span><i class="fa fa-user-circle fa-suspended"></i></span><label class="label-caption">Suspenso</label></caption>
-
 </div>
 </div>
 <!--end: page-content-->

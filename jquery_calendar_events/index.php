@@ -70,14 +70,10 @@ if(isset($_POST['action']) or isset($_GET['view']))
 <link href="https://fonts.googleapis.com/css?family=Oswald|Ubuntu" rel="stylesheet">
 <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="../bootstrap/fonts/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/scrolltop.css">
 <link rel="stylesheet" href="../css/Footer-with-map.css">
-
-
-
 <link  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" >
-
+<link rel="stylesheet" href="../css/style.css">
 <link href="css/fullcalendar.css" rel="stylesheet" />
 <link href="css/fullcalendar.print.css" rel="stylesheet" media="print" />
 
@@ -126,14 +122,22 @@ if(isset($_POST['action']) or isset($_GET['view']))
             <li><a href="../trainPlan.html">Planos de treino</a></li>
           </ul>
         </li>
-        <li><a href="../members.html">Membros</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?echo $_SESSION['nome'];?></a>
+          <ul class="dropdown-menu">
+            <li><a href="../user_profile.php">Perfil</a></li>
+            <li><a href="../mensalidades.php">Mensalidades</a></li>
+            <li><a href="index.php">Inscrição Aulas</a></li>
+            <li><a href="../php/logout.php">Logout</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
 
 <!-- add calander in this div -->
-<div class="container">
+<div class="container calendar">
   <div class="row">
 <div class="espaço" id="calendar"></div>
 

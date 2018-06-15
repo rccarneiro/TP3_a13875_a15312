@@ -12,17 +12,14 @@ if($_POST){
     $row = $result->fetch();
     if($row){
         $_SESSION['email'] = $email;
-        $_SESSION['password'] = $password;
         $_SESSION['nome'] = $row['Nome'];
         header('location:../user_profile.php');
     }else{
         unset ($_SESSION['email']);
-        unset ($_SESSION['password']);
         header('location:../members.html');
     }
 }else{
     unset ($_SESSION['email']);
-    unset ($_SESSION['password']);
 }
 
 

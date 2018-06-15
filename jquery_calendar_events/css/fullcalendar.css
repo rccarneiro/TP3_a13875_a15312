@@ -13,7 +13,9 @@
 .fc-rtl {
 	text-align: right;
 }
-
+body{
+		background-color: #fff;
+}
 body .fc { /* extra precedence to overcome jqui */
 	font-size: 1em;
 }

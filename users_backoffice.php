@@ -46,11 +46,11 @@ require_once "./php/db.php";
          <ul class="nav navbar-nav">
            <li><a href="users_backoffice.php">Informação de Utilizadores</a></li>
            <li><a href="trainers_backoffice.php">Informação de Treinadores</a></li>
-           <li><a href="calendar.php">Calendário de Aulas</a></li>
+           <li><a href="./jquery_calendar_aulas/index.php">Calendário de Aulas</a></li>
            <li class="dropdown">
-             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bem vindo, Admin!</a>
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin</a>
              <ul class="dropdown-menu">
-               <li><a href="#">Perfil</a></li>
+               <li><a href="indexAdmin.php">Perfil</a></li>
                <li><a href="./php/logout_backoffice.php">Logout</a></li>
              </ul>
            </li>
@@ -71,12 +71,6 @@ require_once "./php/db.php";
          <table class="table table-striped table-hover">
             <thead>
                <tr align="center">
-                  <th>
-                     <span class="custom-checkbox">
-                     <input type="checkbox" id="selectAll">
-                     <label for="selectAll"></label>
-                     </span>
-                  </th>
                   <th>ID</th>
                   <th>Nome</th>
                   <th>Email</th>
@@ -94,12 +88,6 @@ require_once "./php/db.php";
             ?>
             <tbody>
                <tr>
-                  <td>
-                     <span class="custom-checkbox">
-                     <input type="checkbox" id="checkbox1" name="options[]" value="1">
-                     <label for="checkbox1"></label>
-                     </span>
-                  </td>
                   <td><?echo $row['ID'];?></td>
                   <td><?echo $row['Nome'];?></td>
                   <td><?echo $row['Email'];?></td>
@@ -107,8 +95,8 @@ require_once "./php/db.php";
                   <td><?echo $row['Peso'];?></td>
                   <td><?echo $row['Altura'];?></td>
                   <td>
-                     <a href="#editUserModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i></a>
-                     <a href="./php/delete.php?id=<?=$row['ID'];?>" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Eliminar">&#xE872;</i></a>
+                     <a href="./php/formUser.php?id=<?=$row['ID'];?>" class="edit" data-toggle="modal"><i class="fa fa-edit" data-toggle="tooltip" title="Editar"></i></a>
+                     <a href="./php/deleteUser.php?id=<?=$row['ID'];?>" class="delete" data-toggle="modal"><i class="fa fa-trash" data-toggle="tooltip" title="Eliminar"></i></a>
                   </td>
                </tr>
             </tbody>
@@ -116,8 +104,6 @@ require_once "./php/db.php";
             }
             ?>
          </table>
-
-         <caption>Legenda: <span><i class="fa fa-user-circle fa-active"></i></span><label class="label-caption">Ativo</label><span><i class="fa fa-user-circle fa-inactive"></i></span><label class="label-caption">Inativo</label><span><i class="fa fa-user-circle fa-suspended"></i></span><label class="label-caption">Suspenso</label></caption>
 
          <!--<div class="clearfix">
             <div class="hint-text">Showing <b><?echo $row?></b> out of <b>25</b> entries</div>

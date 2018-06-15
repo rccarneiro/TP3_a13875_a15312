@@ -1,14 +1,8 @@
 <?php
 require_once "db.php";
+session_start();
 
-$id = $_REQUEST['ID'];
-$foto = $_REQUEST['Foto'];
-$name = $_REQUEST['Nome'];
-$email = $_REQUEST['Email'];
-$role = $_REQUEST['Role'];
-$status = $_REQUEST['Status'];
-
-$sql = "UPDATE Users SET Foto=:foto, Nome=:nome, Email=:email, Role=:role, Status=:status WHERE ID =" . $id;
+$sql = "UPDATE Treinadores SET Foto=:foto, Nome=:nome, Email=:email, Role=:role, Status=:status WHERE ID =" . $id;
 $stmt = $PDO->prepare( $sql );
 
 $stmt->bindParam(':foto', $uploaded_file);
