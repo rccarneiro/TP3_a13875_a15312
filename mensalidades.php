@@ -4,7 +4,7 @@ require_once './php/db.php';
 session_start();
 $id = $_REQUEST['ID'];
 
-$sql = "SELECT * FROM Mensalidades WHERE User_ID=".$id;
+$sql = "SELECT * FROM Mensalidades";
 $result = $PDO->query($sql);
 $rows = $result->fetchAll();
 ?>

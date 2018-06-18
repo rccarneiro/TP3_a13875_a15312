@@ -85,7 +85,7 @@ require_once "./php/db.php";
               $subresult = $PDO->query($subquery);
               $query = $subresult->fetch();*/
 
-              $subqueryA = 'SELECT Treinadores.ID as id ,Treinadores.Nome as nome,Treinadores.Contacto, Disponibilidade.Descrição as descricao FROM Treinadores inner join Disponibilidade on Treinadores.Disponibilidade_ID =Disponibilidade.ID  WHERE Treinadores.ID='.$row['ID'];
+              $subqueryA = 'SELECT Treinadores.ID as id ,Treinadores.Nome as nome,Treinadores.Contacto as contacto, Disponibilidade.Descrição as descricao FROM Treinadores inner join Disponibilidade on Treinadores.Disponibilidade_ID =Disponibilidade.ID  WHERE Treinadores.ID='.$row['ID'];
               $subresultA = $PDO->query($subqueryA);
               $queryA = $subresultA->fetch();
 
